@@ -1,6 +1,6 @@
 # Mix It Up — Release Archive
 
-This repository is a **read‑only archive** of historical Mix It Up releases originally published at `SaviorXTanren/mixer-mixitup`. It exists to preserve past installers, source archives, and changelogs in one place for reference and reproducibility.
+This repository is a **read-only archive** of historical Mix It Up releases originally published at `SaviorXTanren/mixer-mixitup`. It exists to preserve past installers, source archives, and changelogs in one place for reference and reproducibility.
 
 > Looking for active development and new releases? This is not it.
 
@@ -8,7 +8,7 @@ This repository is a **read‑only archive** of historical Mix It Up releases or
 
 - Original release assets: `.zip`, `.exe`, `.msi`, and `Changelog.html` files as they were published.
 - Source archives for each tag (`source-<tag>.zip`) that correspond to the historical tag contents.
-- A `checksums.sha256` file per release listing SHA‑256 hashes for all assets in that release.
+- A `checksums.sha256` file per release listing SHA-256 hashes for all assets in that release.
 
 ## What’s not here
 
@@ -17,20 +17,20 @@ This repository is a **read‑only archive** of historical Mix It Up releases or
 
 ## Authenticity and integrity
 
-- **Code signing:** most releases from recent years are Authenticode‑signed with our EV code‑signing certificate and include a trusted timestamp. Some older releases are **unsigned**; this mirrors the original state at time of release.
+- **Code signing:** most releases from recent years are Authenticode-signed with our EV code-signing certificate and include a trusted timestamp. Some older releases are **unsigned**; this mirrors the original state at time of release.
 - **Checksums:** every release includes `checksums.sha256`. Verify downloads before use.
 
 ## Verify checksums
 
 **Windows (PowerShell):**
-```powershell
+```
 # In the folder where you downloaded the assets
 Get-FileHash * -Algorithm SHA256 | Format-Table -Auto
 # Compare values with the contents of checksums.sha256
 ```
 
 **macOS/Linux:**
-```bash
+```
 # Verifies each file against the list
 sha256sum -c checksums.sha256
 # or
@@ -40,12 +40,12 @@ shasum -a 256 -c checksums.sha256
 ## Verify Windows signatures (if present)
 
 **PowerShell:**
-```powershell
+```
 Get-AuthenticodeSignature .\MixItUp-Setup.exe | Format-List *
 ```
 
 **signtool (if installed):**
-```powershell
+```
 signtool verify /pa /all .\MixItUp-Setup.exe
 ```
 
@@ -67,7 +67,12 @@ Each GitHub release in this archive mirrors a historical tag and typically conta
 ## Safety notes
 
 - Old unsigned builds may trigger SmartScreen or AV heuristics. Use checksums to confirm integrity.
-- This archive is provided **as‑is** for historical reference and reproducibility.
+- This archive is provided **as-is** for historical reference and reproducibility.
+
+## Copyright & Trademarks
+
+Copyright © 2025 Blazing Cacti LLC. All rights reserved.  
+Mix It Up™ and associated marks are trademarks of Blazing Cacti LLC.
 
 ---
 
