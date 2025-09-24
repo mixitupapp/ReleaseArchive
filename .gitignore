@@ -1,0 +1,6 @@
+# ReleaseArchive scoped ignore rules
+# Ignore all historical Desktop release artifact folders & files
+Desktop/
+
+# (Optional) keep a placeholder marker if needed:
+#!Desktop/.keep
